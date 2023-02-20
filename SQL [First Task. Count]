@@ -1,0 +1,4 @@
+SELECT COUNT(*) as hotmail_users_in_germany
+FROM Customer c
+LEFT JOIN Address a ON c.user_id = a.user_id
+WHERE a.country = 'Germany' AND c.email LIKE '%hotmail.com'

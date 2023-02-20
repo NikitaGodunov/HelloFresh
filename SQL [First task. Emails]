@@ -1,0 +1,4 @@
+SELECT c.email AS hotmail_users_in_germany_emails
+FROM Customer c
+INNER JOIN Address a ON c.user_id = a.user_id
+WHERE a.country = 'Germany' AND c.email LIKE '%@hotmail.%

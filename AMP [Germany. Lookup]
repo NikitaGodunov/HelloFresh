@@ -1,0 +1,10 @@
+%%[
+var @Header, @Content, @Customer_Care
+set @rows = LookupRows("Content", "country", "Germany")
+if RowCount(@rows) > 0 then
+    set @row = Row(@rows, 1)
+    set @Header = Field(@row, "country_header")
+    set @Content = Field(@row, "country_content")
+    set @Customer_Care = Field(@row, "country_customer care")
+endif
+]%%

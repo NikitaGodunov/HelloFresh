@@ -1,0 +1,18 @@
+%%[
+var @status, @Subjectline
+
+/* Retrieve the status for the current customer */
+
+set @status = AttributeValue("status")
+
+/* Determine the appropriate subject line based on the status */
+
+
+if @status == "active" then
+set @Subjectline = "New recipes this week!"
+elseif @status == "paused" then
+set @Subjectline = "Sign up now to pick your recipes"
+else
+set @Subjectline = "DEFAULT SUBJECT LINE"
+endif
+]%%

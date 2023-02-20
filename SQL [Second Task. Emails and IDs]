@@ -1,0 +1,6 @@
+SELECT c.user_id, c.email
+FROM Customer c
+JOIN Address a ON c.user_id = a.user_id
+WHERE c.status = 'paused' 
+AND a.city = 'Berlin'
+AND c.date_lastopen >= DATEADD(month, -3, GETDATE())
